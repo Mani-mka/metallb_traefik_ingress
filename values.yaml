@@ -1,0 +1,7 @@
+# use this config file while installing metallb via helm chart
+configInline:
+  address-pools:
+   - name: default
+     protocol: layer2
+     addresses:
+     - 192.168.49.50-192.168.49.80

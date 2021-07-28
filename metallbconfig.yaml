@@ -1,0 +1,13 @@
+# use this config file while installing helm via manifest files
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: metallb-config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - 192.168.49.20-192.168.49.50
